@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .chat1{
+      /* border:solid red; */
+      width:200px;
+      height:50px;
+      position:relative;
+      left:500px;
+      top:80px;
+      border-top-left-radius:20px;
+      border-top-right-radius:20px;
+      display:flex;
+      flex-wrap:wrap;
+      background-color:teal;
+    }
+    .chat2{
+      /* border:solid red; */
+      width:200px;
+      height:300px;
+      position:relative;
+      left:500px;
+      top:78px;
+      overflow-y:scroll;
+      /* background-image:url('static/theme.jpg');
+      background-size:cover;
+      background-repeat:no-repeat; */
+      background-image:repeating-linear-gradient(navy,lightskyblue);
+     
+    }
+    .chat2::-webkit-scrollbar{
+      display:none;
+      
+    }
+    .typing{
+      width:190px;
+      height:25px;
+      position:relative;
+      left:505px;
+      top:39px;
+      border-top-left-radius:20px;
+      border-top-right-radius:20px;
+      border-bottom-left-radius:20px;
+      border-bottom-right-radius:20px;
+      text-align:center;
+      align-content:center;
+    }
+    .chat3{
+      /* border:solid red; */
+      width:200px;
+      height:40px;
+      position:relative;
+      left:500px;
+      top:76px;
+      
+    }
+    #sticky1{
+      /* border:solid black; */
+      width:50px;
+      height:20px;
+      border-top-right-radius:10px;
+      border-top-left-radius:10px;
+      border-bottom-right-radius:10px;
+      border-bottom-left-radius:10px;
+      margin-top:1px;
+      margin-left:70px;
+      position:sticky;
+      top:3px;
+      color:white;
+        /* overflow:sticky;
+        top:3px; */
+    }
+    #com1{
+      /* border:solid black; */
+      width:50px;
+      height:20px;
+      /* border-top-right-radius:10px;  */
+      border-top-left-radius:5px;
+      border-bottom-right-radius:5px;
+      border-bottom-left-radius:5px;
+      position:relative;
+      left:140px;
+      top:10px;
+      text-align:center;
+      color:white;
+      background-color:teal;
+    }
+    #com2{
+      border-bottom-right-radius:5px;
+      /* border:solid black; */
+      width:60px;
+      height:20px;
+      border-top-right-radius:5px;
+        /* border-top-left-radius:5px;x; */
+      border-bottom-left-radius:5px;
+      color:white;
+      background-color:teal;
+      text-align:center;
+      margin-left:8px;
+      /* margin-top:10px; */
+    } 
+    #sticky2{
+      /* border:solid black; */
+      width:60px;
+      height:20px;
+      border-top-right-radius:10px;
+      border-top-left-radius:10px;
+      border-bottom-right-radius:10px;
+      border-bottom-left-radius:10px;
+      margin-left:65px;
+      margin-top:9px;
+      text-align:center;
+      position:sticky;
+      top:3px;
+      color:white;
+      /* overflow:sticky; */
+      /* top:3px; */
+      /* z-index:-1; */
+       
+    }
+      #com3{
+      /* border:solid black; */
+      width:70px;
+      height:35px;
+      /* border-top-right-radius:5px; */
+       border-top-left-radius:5px;
+      border-bottom-right-radius:5px;
+      border-bottom-left-radius:5px;
+      position:relative;
+      left:120px;
+      top:10px;
+      text-align:center;  
+      color:white; 
+      background-color:teal;    
+    }
+    #com4{
+      /* border:solid black; */
+      width:90px;
+      height:20px;
+       /* border-top-right-radius:5px; */
+       border-top-left-radius:5px;
+      border-bottom-right-radius:5px;
+      border-bottom-left-radius:5px;
+      position:relative;
+      left:100px;
+      top:20px;
+      text-align:center;
+      color:white;
+      background-color:teal;
+    } 
+    .com5{
+      /* border:solid black; */
+      background-image:url('./static/ok.jpg');
+      background-size:contain;
+       border-top-right-radius:5px;
+       border-top-left-radius:5px;
+      border-bottom-right-radius:5px;
+      border-bottom-left-radius:5px;
+      width:70px;
+      height:50px;
+      position:relative;
+      left:7px;
+      top:25px;
+      color:white;
+      background-color:teal;
+    }
+    #sticky3{
+      /* border:solid black; */
+      width:75px;
+      height:20px;
+      border-top-right-radius:10px;
+      border-top-left-radius:10px;
+      border-bottom-right-radius:10px;
+      border-bottom-left-radius:10px;
+      margin-left:65px;
+      margin-top:32px;
+      text-align:center;
+      color:white;
+      position:sticky;
+      top:3px;
+    }
+      
+    
+    .com6{
+      /* border:solid black; */
+      
+      width:70px;
+      height:50px;
+      margin-top:11px;
+      margin-left:120px;
+      /* border-top-right-radius:5px;  */
+       border-top-left-radius:5px;
+      border-bottom-right-radius:5px;
+      border-bottom-left-radius:5px;
+      text-align:center;
+      color:white;
+      background-color:teal;
+      
+
+     
+     }
+    .box1{
+      /* border:solid red; */
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      margin-left:10px;
+      margin-top:3px;
+      background-image:url('static/chat.jpg.jpg');
+      background-size:contain;
+      background-repeat:no-repeat; */ */
+    }
+    .box2{
+      /* border:solid red; */
+      width:50px;
+      height:20px;
+      
+      margin-left:10px;
+      margin-top:15px;
+      color:white;
+      
+    } 
+    .com7{
+      /* border:solid black; */
+      
+      width:70px;
+      height:25px;
+      margin-top:11px;
+      margin-left:10px;
+      border-top-right-radius:5px; 
+       /* border-top-left-radius:5px; */
+      border-bottom-right-radius:5px;
+      border-bottom-left-radius:5px;
+      text-align:center;
+      align-content:center;
+      color:white;
+      background-color:teal;
+    }
+    .com8{
+      /* border:solid black; */
+      
+      width:70px;
+      height:38px;
+      margin-top:11px;
+      margin-left:10px;
+      border-top-right-radius:5px; 
+       /* border-top-left-radius:5px; */
+      border-bottom-right-radius:5px;
+      border-bottom-left-radius:5px;
+      text-align:center;
+      align-content:center;
+      color:white;
+      background-color:teal;
+    }
+    body{
+      /* background-image:url("static/whatsapp.jpg");
+      background-size:contain;
+      background-repeat:repeat-y;
+      background-repeat:repeat-x; */
+      background-image:linear-gradient(slateblue,lightblue);
+      background-repeat:repeat-y;
+      background-size:contain;
+    }
+    h1{
+      font-family:papyrus;
+      margin-left:500px;
+      margin-top:50px;
+    }
+      
+
+     
+     
+    
+    
+
+    /* .bg-main1{
+      height: 100vh;
+      width: 100vw;
+      background-color: rgb(225, 35, 14);
+      display: flex;
+      justify-content: center;
+      align-items: center; */
+    /* }
+    .bg-main2{
+      height: 60vh;
+      width: 40vw;
+      background-image: url("./static/theme.jpg");
+      background-size: cover;
+      border-radius: 15px; */
+    /* }
+      .main1{
+        height: 15vh;
+        width: 40vw;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: teal;
+      }
+      .main2{
+        height: 45vh;
+        width: 40vw;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+      }
+      h1{
+        color: #ffffff;
+      } */
+  </style>
+</head>
+<body>
+  <h1>CHATBOT</h1>
+  <div class="chat1">
+    <div class="box1"></div>
+    <div class="box2">Akshay</div>
+  </div>
+  <div class="chat2">
+    <div>
+    <div id="sticky1">Sunday</div>
+    <div id="com1">Hi</div>
+    <div id="com2">Hello</div>
+  </div>
+  <div>
+    <div id="sticky2">Tuesday</div>
+    <div id="com3">Whatsup dude</div>
+    <div id="com4">Let's meet!</div>
+    <div class="com5"></div>
+  </div>
+  <div>
+    <div id="sticky3">Wednesday</div>
+    <div class="com6">What Happened</div>
+    <div class="com7">Nothing</div>
+    <div class="com8">Sure Tomorrow</div>
+  </div>
+
+  </div>
+  <div class="chat3"></div>
+
+  <textarea class="typing" cols="20" rows="20" placeholder="Start typing Here"></textarea>
+ 
+
+
+  <!-- <div class="bg-main1">
+    <div class="bg-main2">
+      <div class="main1">
+        <h1>10000 coders</h1>
+      </div>
+      <div class="main2">
+        <h1>10000 coders</h1>
+      </div>
+    </div> -->
+  </div>
+</body>
+</html>
